@@ -1,0 +1,32 @@
+<div id="application" data-home="$home" data-apphome="$apphome" data-themeprefix="${themeprefix}" data-browserlanguage="$!{browserlanguage}" data-mediadbappid="$!mediaarchive.getMediaDbId()">
+    #if ( $canviewerrors )
+	<div id="errordiv"></div>
+	#end
+	<div id="emcontainer" style="background-color:#eee;">
+	
+		$pages.include("${themeprefix}/layouts/topmenu.html")
+	
+	<!-- 
+		<div id="header" class="clearfix" role="banner" style="padding:0px">
+		##	$pages.include("${themeprefix}/layouts/header.html")
+			<div id="site-title">$!content.tagline</div>
+		</div>
+	 -->
+	 
+	 
+	 
+	 	
+		<div id="emcontent" style="background-color:#eee;">
+		  <div id="main">
+		       $pages.includeContent()
+		  </div>
+		</div>
+	
+		<!-- begin: #footer -->
+		<div id="footer" role="contentinfo">
+	    	 $pages.include("${themeprefix}/layouts/footer.html")
+	     	## $pages.include("${apphome}/components/uploadqueue/index.html")
+		</div>
+ 
+	</div>
+</div>

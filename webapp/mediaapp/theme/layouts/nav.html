@@ -1,0 +1,36 @@
+#if($content.isPropertyTrue("shownav")) 
+
+<ul class="emheaderbuttons" >
+
+#if( $canviewhomelink )
+<li><a class="navbutton" id="module"  href="$home$apphome/index.html"> [[Home]] </a></li>
+#end
+
+#if ($canquicksearch)
+<li>
+$pages.include("$apphome/components/advancedsearch/topsearch.html")
+</li>
+#end
+
+#if( $canviewopencollections)
+<li>
+$pages.include("$apphome/components/librarycollection/pickrecentcollection.html")
+</li>
+#end
+
+
+#if($canviewbasket)
+    <li #if($section=="basket") class="navselected"  #end  style="float: right;">
+    	$pages.include("$apphome/components/basket/menuitem.html")
+    </li>
+#end
+
+    
+
+ </ul>
+
+
+#end
+
+
+
