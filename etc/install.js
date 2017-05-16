@@ -3,10 +3,10 @@ importPackage( Packages.java.util );
 importPackage( Packages.java.lang );
 importPackage( Packages.org.entermediadb.modules.update );
 
-var appname = "app-emshare";
-var foldername = "emshare";
+var appname = "app-mediaapp";
+var foldername = "mediaapp";
 
-//http://dev.entermediasoftware.com/jenkins/job/app-emshare/lastSuccessfulBuild/artifact/deploy/app-emshare.zip
+//http://dev.entermediasoftware.com/jenkins/job/app-mediaapp/lastSuccessfulBuild/artifact/deploy/app-mediaapp.zip
 var zip = "http://dev.entermediasoftware.com/jenkins/job/@BRANCH@" + appname + "/lastSuccessfulBuild/artifact/deploy/" + appname + ".zip";
 
 var root = moduleManager.getBean("root").getAbsolutePath();

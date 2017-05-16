@@ -15,11 +15,11 @@
  	
   <target name="update-dependencies" depends="clean">
 		<mkdir dir="${build}"/>
-		<get src="http://dev.entermediasoftware.com/jenkins/job/@BRANCH@app-emshare/lastSuccessfulBuild/artifact/deploy/app-emshare.zip" dest="${build}/app-emshare.zip" />	
+		<get src="http://dev.entermediasoftware.com/jenkins/job/@BRANCH@app-mediaapp/lastSuccessfulBuild/artifact/deploy/app-mediaapp.zip" dest="${build}/app-mediaapp.zip" />	
   </target>
     
   <target name="unzip" depends="update-dependencies">
-    <unzip  src="${build}/app-emshare.zip" dest="base" />
+    <unzip  src="${build}/app-mediaapp.zip" dest="base" />
   </target>
  
 </project>
