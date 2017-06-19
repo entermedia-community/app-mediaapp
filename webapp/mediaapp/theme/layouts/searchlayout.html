@@ -1,43 +1,15 @@
+<div id="searchlayout" class="subcolumns">
+          <div class="c25l" id="left-col">
 
-
-<div id="searchlayoutX" class="subcolumns" >
-##	<div class="row" >
-##          <div class="col-md-1" > ##collapse menu or hover on top of content
-##			$pages.include("$apphome/components/sidebars/standard.html", $context)
-##      	 </div>
- ##        Collection tabs go here with + and end
-##         <div id="col-md-11" >
-
-		<ul class="ui-tabs-nav nav pull-left emtabs" style="width:100%;" data-defaulttab=#if( $librarycol )"col$librarycol.getId()"#elseif( $orderitems )"basketcase"#else "mediatab"#end data-targetdiv="collection-tab-content" >
-		  <li class="ui-corner-top "><a id="mediatab" data-layouts="2" data-alwaysreloadpage="true"   href="$apphome/" >[[All Assets]]</a></li>
-		  #foreach($collection in $usercollections )
-		  <li id="tab$collection.getId()" class="ui-corner-top #if( $librarycol.getId() == $collection.getId() ) selected #end" style="min-width:120px">
-		  	<a id="col$collection.getId()" style='float:left;padding-left: 30px;background: url("$themeprefix/images/icons/box.png") no-repeat scroll 4px 4px;' data-layouts="2" data-alwaysreloadpage="true"   
-		  	href="$apphome/views/modules/librarycollection/media/${collection.getId()}.html" >$collection</a>
-		  	<a style="float:right" class='ajax' targetdiv="tab$collection.getId()" href="$home$apphome/components/opencollections/closecollectiontab.html?collectionid=${collection.getId()}"  title="[[Collection Search]]" ><i class="glyphicon glyphicon-remove"></i>
-		  	</a>		  	
-		  </li>
-		  #end
-		  <li style="border:0;background:#eee;margin-top:-2px">
-		  <a class="emdialog" style="background:#eee;" title="[[Collection Search]]" data-hidefooter="true" href="$home$apphome/components/opencollections/searchcollection.html"><img src="$themeprefix/images/icons/findfolder.svg" style="height:20px;" title="Open Collection"/></a>
-		  </li>
-		  #set($colSize = $orderitems.size() )
-		  <li id="basketcase" class="ui-corner-top " style="float:right;margin-right:70px"><a id="mediatab" data-layouts="2" data-alwaysreloadpage="true"   href="$apphome/views/basket/index.html" >[[Basket]] #if($colSize > 0)($colSize)#end</a></li>
-		  
-	  </ul>
-
-<div class="clearfix"></div>
-
-<a href="#" onclick='$("#showsidebar").toggle();' style="position:relative;"><img src="$themeprefix/images/icons/show-more-button-with-three-dots-icon.svg" style="height:18px;float:left;margin-top:12px;margin-left:4px;" title="Search"/></a>
-<div id="showsidebar" style="display:none;position:absolute;left:0px;top:140px;width:222px;z-index:100;background:#eee;">
-$pages.include("$apphome/components/sidebars/standard.html", $context)
-</div> 
-
-
-
-       	 	<div id="view-picker-content" class="search-view" >
+			$pages.include("$apphome/components/sidebars/standard.html", $context)
+			
+      	 </div>
+         <div id="right-col">
+       	 	<div id="view-picker-content" class="search-view liquid-sizer">
+       	 	
+       	 	
 					$pages.includeContent()
 			</div>
-###        </div>
-</div>        
+
+        </div>
 </div>

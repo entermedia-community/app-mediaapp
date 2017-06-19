@@ -6,18 +6,21 @@
 	
 		$pages.include("${themeprefix}/layouts/topmenu.html")
 	
-	<!-- 
-		<div id="header" class="clearfix" role="banner" style="padding:0px">
-		##	$pages.include("${themeprefix}/layouts/header.html")
-			<div id="site-title">$!content.tagline</div>
-		</div>
-	 -->
-	 
-	 
-	 
-	 	
 		<div id="emcontent" style="background-color:#eee;">
 		  <div id="main">
+
+
+##Look at the $hits and load up collection or category tab. Assets by default
+		  
+	  		<ul class="ui-tabs-nav nav pull-left emtabs" style="width:100%;" data-defaulttab=#if( $librarycol )"col$librarycol.getId()"#elseif( $orderitems )"basketcase"#else "mediatab"#end data-targetdiv="collection-tab-content" >
+		  <li class="ui-corner-top "><a id="assetmodule" data-layouts="2" data-alwaysreloadpage="true"   href="$apphome/views/search/index.html" >[[Assets]]</a></li>
+		  <li class="ui-corner-top "><a id="categorymodule" data-layouts="2" data-alwaysreloadpage="true"   href="$apphome/views/modules/category/index.html" >[[Categories]]</a></li>
+		  <li class="ui-corner-top "><a id="collectonmodule" data-layouts="2" data-alwaysreloadpage="true"   href="$apphome/views/modules/collections/index.html" >[[Collections]]</a></li>
+	  </ul>
+
+<div class="clearfix"></div>
+		  
+		  
 		       $pages.includeContent()
 		  </div>
 		</div>
