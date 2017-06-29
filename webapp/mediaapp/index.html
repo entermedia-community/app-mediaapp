@@ -1,6 +1,97 @@
-#if( $hits )
-$pages.include("$apphome/views/search/index.html")
-#else
-
-$pages.include("$apphome/views/modules/asset/search/all.html")
-#end
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi">
+        <title>Mediaapp Web</title>
+        <meta name="description" content="Enter Media web for mediaapp">
+        <meta name="keywords" content="media, app, mediaapp, entermedia, enter, media">
+    <link rel="stylesheet" href="theme/styles/theme.css">
+    <body>
+      <div class="main__container">
+        <div class="fake-row">
+          <div class="left__sidebar sidebars">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h1>hola</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="media__options col-xs-12 col-md-12 col-lg-12">
+                  <div class="media__options__left media__options__objects">
+                    <button class="btn__no__bg no-active" disabled>Download</button>
+                    <div class="dropdown-selector">
+                      <button class="btn__no__bg own-dropdown" type="button" id="dropdown-share">Share <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="dropdown-selector">
+                      <button class="btn__no__bg own-dropdown" type="button" id="dropdown-share">Selections <span class="glyphicon glyphicon-menu-down"></span></button>
+                    </div>
+                  </div>
+                  <div class="media__options__right media__options__objects">
+                    <div class="media__options__result">
+                      <p class="generic__text">Results</p>
+                      <p class="result__displaying">1-15</p>
+                      <p class="generic__text">of</p>
+                      <p class="result__of">80</p>
+                    </div>
+                    <div class="media__options__pagination"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#"><span class="glyphicon glyphicon-menu-right"></span></a></div>
+                    <div class="media__options__type__media__showing">
+                      <select>
+                        <option>Gallery</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row container__gallery">
+                <div class="gallery__item selected">
+                  <div class="item__img" style="background: url(https://i.ytimg.com/vi/L1bruVSY8LE/maxresdefault.jpg) no-repeat center center;"></div>
+                  <div class="item__info">
+                    <p class="info__title">Motocross.jpg</p>
+                    <div class="info__icons"><span class="glyphicon glyphicon-eye-open"></span><span class="glyphicon glyphicon-heart"></span></div>
+                  </div>
+                </div>
+                <div class="gallery__item">
+                  <div class="item__img" style="background: url(https://i.ytimg.com/vi/L1bruVSY8LE/maxresdefault.jpg) no-repeat center center;"></div>
+                  <div class="item__info">
+                    <p class="info__title">Motocross.jpg</p>
+                    <div class="info__icons"><span class="glyphicon glyphicon-eye-open"></span><span class="glyphicon glyphicon-heart"></span></div>
+                  </div>
+                </div>
+                <div class="gallery__item">
+                  <div class="item__img" style="background: url(https://i.ytimg.com/vi/L1bruVSY8LE/maxresdefault.jpg) no-repeat center center;"></div>
+                  <div class="item__info">
+                    <p class="info__title">Motocross.jpg</p>
+                    <div class="info__icons"><span class="glyphicon glyphicon-eye-open"></span><span class="glyphicon glyphicon-heart"></span></div>
+                  </div>
+                </div>
+                <div class="gallery__item">
+                  <div class="item__img" style="background: url(https://i.ytimg.com/vi/L1bruVSY8LE/maxresdefault.jpg) no-repeat center center;"></div>
+                  <div class="item__info">
+                    <p class="info__title">Motocross.jpg</p>
+                    <div class="info__icons"><span class="glyphicon glyphicon-eye-open"></span><span class="glyphicon glyphicon-heart"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right__sidebar sidebars">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h1>hola2</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/app/scripts/libs/jquery-3.2.1.js"></script>
+    </body>
+  </head>
+</html>
